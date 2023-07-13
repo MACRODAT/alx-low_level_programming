@@ -1,13 +1,14 @@
 /*
- * File 4-puts
- * auth me
+ * File: 4-puts.c
+ * Auth: me
  */
 
 #include <stdio.h>
 
 /**
- * PRINTS HELLO WORLD
+ * main - PRINTS HELLO WORLD
  *
+ * Return: 0.
  */
 int main(void)
 {
