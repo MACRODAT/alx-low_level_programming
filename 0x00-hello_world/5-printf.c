@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /**
- * PRINTF HELLO WORLD
- *
+ * main - PRINTF HELLO WORLD
+ * Return: 0.
  */
 
 int main(void)
