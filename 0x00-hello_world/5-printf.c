@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-/*PRINTF HELLO WORLD
+/**
+ * PRINTF HELLO WORLD
  *
  */
 

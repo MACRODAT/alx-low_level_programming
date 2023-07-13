@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-/* PRINTS HELLO WORLD
+/** 
+ * PRINTS HELLO WORLD
  *
  */
-
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
