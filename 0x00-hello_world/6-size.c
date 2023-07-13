@@ -3,7 +3,7 @@
 /**
  * main - PRINTS SIZE OF VARIOUS TYPES
  * Return: 0.
- * /
+ */
 
 int main(void)
 {
