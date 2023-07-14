@@ -2,7 +2,12 @@
 #include <stdlib.h>
 #include <time.h>
 
-/* main */
+/** 
+ * main - test
+ * Return: 0
+ *
+ *
+ * */
 int main(void)
 {
 	int n;
