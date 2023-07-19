@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - main fct
+ * print_alphabet - main fct
  * Return: 0
  */
 
