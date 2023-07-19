@@ -1,6 +1,7 @@
 #include "main.h"
 
-/** p_3 - for 1000
+/** 
+ * p_3 - for 1000
  * @n: num
  * Return: 0
  */
@@ -18,7 +19,8 @@ void p_3(int n)
 }
 
 
-/** p_2 - for 100
+/** 
+ * p_2 - for 100
  * @n: num
  * Return: 0
  */
@@ -35,7 +37,8 @@ void p_2(int n)
 	}
 }
 
-/** p_1 - for 10s
+/** 
+ * p_1 - for 10s
  * @n: num
  * Return: 0
  */
@@ -49,6 +52,7 @@ void p_1(int n)
 	else
 	{
 		int a = n / 10;
+
 		if (a > 9)
 		{
 			_putchar('0' + (a % 10));
@@ -60,7 +64,8 @@ void p_1(int n)
 	}
 }
 
-/** p_0 - for 1s
+/** 
+ * p_0 - for 1s
  * @n: num
  * Return: 0
  */
@@ -68,6 +73,7 @@ void p_1(int n)
 void p_0(int n)
 {
 	int a = n % 10;
+
 	if (a == 0)
 	{
 		_putchar('0');
