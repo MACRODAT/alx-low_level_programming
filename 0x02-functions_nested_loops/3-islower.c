@@ -2,6 +2,7 @@
 
 /**
  * _islower - main fct
+ * @c: char
  * Return: 0
  */
 
