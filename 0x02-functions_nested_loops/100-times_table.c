@@ -1,6 +1,6 @@
 #include "main.h"
 
-/** 
+/**
  * p_3 - for 1000
  * @n: num
  * Return: 0
@@ -19,7 +19,7 @@ void p_3(int n)
 }
 
 
-/** 
+/**
  * p_2 - for 100
  * @n: num
  * Return: 0
@@ -37,7 +37,7 @@ void p_2(int n)
 	}
 }
 
-/** 
+/**
  * p_1 - for 10s
  * @n: num
  * Return: 0
@@ -64,7 +64,7 @@ void p_1(int n)
 	}
 }
 
-/** 
+/**
  * p_0 - for 1s
  * @n: num
  * Return: 0
