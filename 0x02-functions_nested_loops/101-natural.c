@@ -6,13 +6,13 @@
  * Return: void
  */
 
-int main()
+int main(void)
 {
 	int sum, a;
 
-	for (a = 3; a < 1024; a=a+3)
+	for (a = 3; a < 1024; a = a + 1)
 	{
-		if (a % 5 == 0)
+		if (a % 5 == 0 || a % 3 == 0)
 		{
 			sum += a;
 		}
