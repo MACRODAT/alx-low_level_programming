@@ -6,9 +6,9 @@
  * Return: void
  */
 
-void pr(int n)
+void pr()
 {
-	int sum, a, b;
+	int sum, a;
 
 	for (a = 3; a < 1024; a=a+3)
 	{
