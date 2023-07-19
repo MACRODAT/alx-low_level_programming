@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 /**
- * pr - prints 1024
+ * main - prints 1024
  *
  * Return: void
  */
 
-void pr()
+int main()
 {
 	int sum, a;
 
@@ -18,4 +18,5 @@ void pr()
 		}
 	}
 	printf("%d\n", sum);
+	return (0);
 }
