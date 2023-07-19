@@ -1,5 +1,1 @@
-#ifndef main
-#define main
-
-
-#endif
+int _putchar(char c);
