@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * add - adds
- * @a - num1
- * @b - num2
+ * @a: num1
+ * @b: num2
  *
  * Return: int
  */
