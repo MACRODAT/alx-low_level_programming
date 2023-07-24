@@ -1,0 +1,14 @@
+[register]
+offline=1
+LanguageName=English.data
+Language=0
+ver=1
+ShowAd=0
+ScanRaw=1
+bRevise = 1
+UseBrowser=0
+ShowWarm=0
+VersionMS=00090000
+VersionLS=00080000
+ReadReg=1
+lastUpdateTs=131071083843210000
