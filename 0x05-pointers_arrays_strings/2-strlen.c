@@ -1,5 +1,5 @@
 /**
- * reset_to_98 - rst
+ * _strlen - rst
  * @s: string
  * Returns: length
  */
