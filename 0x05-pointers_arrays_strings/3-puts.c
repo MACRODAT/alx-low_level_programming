@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * _puts - ret
  * @str: param1
