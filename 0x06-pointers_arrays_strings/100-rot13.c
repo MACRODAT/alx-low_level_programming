@@ -9,19 +9,21 @@ char *rot13(char *str)
 {
 	int i, j;
 
+	char org[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char rep[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
 	i = 0;
 	while (str[i] != '\0')
 	{
 		j = 0;
-		if (str[i] >= 65 && str[i] <= 90)
+		while (org[j] != '\0')
 		{
-			str[i] = (str[i] - 65 + 13) % 25;
-			str[i] += 65;
-		}
-		if (str[i] >= 97 && str[i] <= 122)
-		{
-			str[i] = (str[i] - 97 + 13) % 25;
-			str[i] += 97;
+			if (str[i] == org[j])
+			{
+				str[i] = rep[j];
+				break;
+			}
+			j++;
 		}
 		i++;
 	}
