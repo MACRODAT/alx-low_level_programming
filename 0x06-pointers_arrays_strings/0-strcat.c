@@ -5,16 +5,21 @@
  * @dest: input string
  * @src: input string
  * Return: str
-**/
+ **/
 char *_strcat(char *dest, char *src)
 {
-    while (*dest)
-        dest++;
-    while(*src)
-    {
-        *dest = *src;
-        src++;
-        dest++;
-    }
-    return dest;
+	int cnt = 0;
+	while (*dest)
+	{
+		cnt++;
+		dest++;
+	}
+	while (*src)
+	{
+		*dest = *src;
+		src++;
+		dest++;cnt++;
+	}
+	*dest = '\0';
+	return dest - cnt;
 }
