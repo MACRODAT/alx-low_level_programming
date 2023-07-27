@@ -5,7 +5,7 @@
  * @s1: input string
  * @s2: input string
  * Return: str
- **/    
+ **/
 int _strcmp(char *s1, char *s2)
 {
 	while (*s1)
