@@ -15,7 +15,12 @@ int main(void)
     _putchar('\n');
     print_number(0);
     _putchar('\n');
-    print_number(-98);
-    _putchar('\n');
+	for (int i = 1; i < 1000000000; i += i * 10)
+    {
+		print_number(i);
+    	_putchar('\n');
+		print_number(-i);
+    	_putchar('\n');
+	}
     return (0);
 }
