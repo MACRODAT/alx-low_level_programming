@@ -22,9 +22,10 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		*dest = *src;
 		src++;
-		dest++;cntb++;
+		dest++;
+		cntb++;
 	}
 	cnt += cntb;
 	*dest = '\0';
-	return dest - cnt;
+	return (dest - cnt);
 }
