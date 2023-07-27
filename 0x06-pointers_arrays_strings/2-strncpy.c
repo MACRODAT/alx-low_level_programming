@@ -13,6 +13,8 @@ char *_strncpy(char *dest, char *src, int n)
 
 	while (*src)
 	{
+		if (dest - dest_ < n)
+			break;
 		*dest = *src;
 		dest++;
 		src++;
