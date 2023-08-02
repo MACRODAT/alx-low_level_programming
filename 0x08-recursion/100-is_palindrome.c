@@ -18,7 +18,7 @@ int _strlen_recursion(char *s)
 
 /**
  * helper - checks
- * @s: string 
+ * @s: string
  * @i: int
  * @len: length - int
  *
