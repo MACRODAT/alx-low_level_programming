@@ -6,13 +6,11 @@
  * @y: number
  * Return: an int
 */
-int _pow_recursion(int x, int y);
+int _pow_recursion(int x, int y)
 {
-	if (n < 0)
-		return -1;
-	if (n == 0)
-		return 1;
-	if (n <= 2)
-		return (n);
-	return (n * factorial(n - 1));
+	if (y < 0)
+		return (-1);
+	if (y == 1)
+		return (x);
+	return (x * _pow_recursion(x, y - 1));
 }
