@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -7,16 +8,9 @@
  *
  * Return: 0
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	char *c = argv[0];
-
-	while (*c)
-	{
-		_putchar(*c);
-		c++;
-	}
-	_putchar('\n');
+	printf("%s\n", argv[0]);
 
 	return (0);
 }
