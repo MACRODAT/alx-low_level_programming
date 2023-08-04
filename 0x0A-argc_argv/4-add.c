@@ -18,6 +18,7 @@ int main(int argc, char *argv[])
 	for (i = 1; i < argc; i++)
 	{
 		char *s = argv[i];
+
 		j += atoi(argv[i]);
 		while (*s)
 		{
