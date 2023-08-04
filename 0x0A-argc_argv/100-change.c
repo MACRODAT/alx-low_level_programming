@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 	if (argc != 2)
 	{
 		printf("Error\n");
-		return 1;
+		return (1);
 	}
 
 	amount = atoi(argv[1]);
@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 	if (amount < 0)
 	{
 		printf("0\n");
-		return 0;
+		return (0);
 	}
 
 	for (coinIndex = 0; coinIndex < 5 && amount >= 0; coinIndex++)
@@ -39,5 +39,5 @@ int main(int argc, char *argv[])
 	}
 
 	printf("%d\n", coinCount);
-	return 0;
+	return (0);
 }
