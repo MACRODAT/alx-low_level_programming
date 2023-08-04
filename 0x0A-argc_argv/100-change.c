@@ -11,33 +11,33 @@
  */
 int main(int argc, char *argv[])
 {
-    int amount, coinIndex, coinCount;
-    int coins[] = {25, 10, 5, 2, 1};
+	int amount, coinIndex, coinCount;
+	int coins[] = {25, 10, 5, 2, 1};
 
-    if (argc != 2)
-    {
-        printf("Error\n");
-        return 1;
-    }
+	if (argc != 2)
+	{
+		printf("Error\n");
+		return 1;
+	}
 
-    amount = atoi(argv[1]);
-    coinCount = 0;
+	amount = atoi(argv[1]);
+	coinCount = 0;
 
-    if (amount < 0)
-    {
-        printf("0\n");
-        return 0;
-    }
+	if (amount < 0)
+	{
+		printf("0\n");
+		return 0;
+	}
 
-    for (coinIndex = 0; coinIndex < 5 && amount >= 0; coinIndex++)
-    {
-        while (amount >= coins[coinIndex])
-        {
-            coinCount++;
-            amount -= coins[coinIndex];
-        }
-    }
+	for (coinIndex = 0; coinIndex < 5 && amount >= 0; coinIndex++)
+	{
+		while (amount >= coins[coinIndex])
+		{
+			coinCount++;
+			amount -= coins[coinIndex];
+		}
+	}
 
-    printf("%d\n", coinCount);
-    return 0;
+	printf("%d\n", coinCount);
+	return 0;
 }
