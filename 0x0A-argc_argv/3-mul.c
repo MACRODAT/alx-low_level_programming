@@ -16,8 +16,8 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	int i = strtol(argv[1]);
-	int j = strtol(argv[2]);
+	int i = strtol(argv[1], NULL, 10);
+	int j = strtol(argv[2], NULL, 10);
 
 	printf("%d\n", i * j);
 
