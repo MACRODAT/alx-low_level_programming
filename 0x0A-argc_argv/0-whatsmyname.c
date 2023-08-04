@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -10,7 +9,14 @@
  */
 int main(int argc, char **argv)
 {
-	printf("%s\n", argv[0]);
+	char *c = argv[0];
+
+	while (*c)
+	{
+		_putchar(*c);
+		c++;
+	}
+	_putchar('\n');
 
 	return (0);
 }
