@@ -29,9 +29,11 @@ char *str_concat(char *s1, char *s2)
 		i++;
 	}
 	i = 0;
+	if (size1 > 0)
+		size1--;
 	while (size2 && i < size2)
 	{
-		ret[i + size1 - 1] = s2[i];
+		ret[i + size1] = s2[i];
 		i++;
 	}
 	return (ret);
