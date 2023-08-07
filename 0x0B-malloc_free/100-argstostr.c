@@ -9,13 +9,14 @@
  */
 char *argstostr(int ac, char **av)
 {
-	if (ac == 0 || av == NULL)
-		return (NULL);
-
 	char *ptr = *av;
 	char *s;
 	int size = 0;
 	int it = 0;
+	int i = 0;
+
+	if (ac == 0 || av == NULL)
+		return (NULL);
 
 	while (it < ac)
 	{
@@ -28,7 +29,6 @@ char *argstostr(int ac, char **av)
 	}
 	s = malloc(sizeof(char) * size + 1);
 	it = 0;
-	int i = 0;
 
 	while (it < ac)
 	{
