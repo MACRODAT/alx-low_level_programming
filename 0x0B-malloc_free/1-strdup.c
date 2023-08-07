@@ -1,34 +1,30 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
- * create_array - creates array
+ * _strdup - creates str
  * @str: int
  *
  * Return: char
 */
 char *_strdup(char *str)
 {
+	char *dup;
 	unsigned int i = 0;
-	char *arr;
+	unsigned int _len = 0;
 
-	if (size == 0)
+	if (!str)
+		return (NULL);
+	while (str[i++])
+		;
+	_len = i;
+	dup = malloc(sizeof(*str) * _len);
+	i = 0;
+	while (i < _len)
 	{
-		return NULL;
+		dup[i] = str[i];
 	}
-	arr = malloc(size * sizeof(char));
-	if (!arr)
-	{
-		return NULL;
-	}
-
-	while (i < size - 1)
-	{
-		arr[i] = c;
-		i++;
-	}
-	arr[i] = '\0';
-
-	return (arr);
+	return (dup);
 }
