@@ -30,6 +30,8 @@ char **strtow(char *str)
 			y = 0;
 		}
 	}
+	if (y == 0)
+		words_l++;
 	if (!words_l)
 		return (NULL);
 	i = 0;
