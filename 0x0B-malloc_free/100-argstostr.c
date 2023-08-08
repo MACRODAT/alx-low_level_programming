@@ -9,7 +9,7 @@
  */
 char *argstostr(int ac, char **av)
 {
-	char *ptr = *av;
+	char *ptr;
 	char *s;
 	int size = 0;
 	int it = 0;
@@ -17,7 +17,7 @@ char *argstostr(int ac, char **av)
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
-
+	ptr = *av;
 	while (it < ac)
 	{
 		ptr = av[it];
