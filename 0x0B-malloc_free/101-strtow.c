@@ -22,7 +22,7 @@ int count_words(char *s)
 		}
 	}
 
-	return word_count;
+	return (word_count);
 }
 
 /**
@@ -41,11 +41,11 @@ char **strtow(char *str)
 		len++;
 	word_count = count_words(str);
 	if (word_count == 0)
-		return NULL;
+		return (NULL);
 
 	matrix = (char **)malloc(sizeof(char *) * (word_count + 1));
 	if (matrix == NULL)
-		return NULL;
+		return (NULL);
 
 	for (i = 0; i <= len; i++)
 	{
@@ -56,7 +56,7 @@ char **strtow(char *str)
 				end = i;
 				tmp = (char *)malloc(sizeof(char) * (c + 1));
 				if (tmp == NULL)
-					return NULL;
+					return (NULL);
 
 				while (start < end)
 					*tmp++ = str[start++];
@@ -73,5 +73,5 @@ char **strtow(char *str)
 
 	matrix[k] = NULL;
 
-	return matrix;
+	return (matrix);
 }
