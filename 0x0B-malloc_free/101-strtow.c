@@ -9,26 +9,17 @@
 char **strtow(char *str)
 {
 	char **words;
-	int i = 0, j = 0, tmp = 0, y = 0;
-	int size = 0, words_l = 0;
+	int i = 0, j = 0, tmp = 0, y = 1, size = 0, words_l = 0;
 
 	if (str == NULL)
 		return (NULL);
-	i = 0;
-	y = 1;
 	while (str[i++])
 	{
 		size++;
-		if (str[i] == ' ')
-		{
-			if (!y)
-				words_l++;
-			y = 1;
-		}
+		if (str[i] == ' ' && !y++)
+			words_l++;
 		else
-		{
 			y = 0;
-		}
 	}
 	if (y == 0)
 		words_l++;
@@ -39,9 +30,8 @@ char **strtow(char *str)
 	if (!words)
 		return (NULL);
 	while (str[j++] == ' ')
-			;
-	j--;
-	tmp = j;
+		i = 0;
+	tmp = --j;
 	while (i < words_l)
 	{
 		while (str[j++] != ' ')
@@ -51,16 +41,11 @@ char **strtow(char *str)
 			return (NULL);
 		y = 0;
 		while (str[tmp] != ' ')
-		{
-			words[i][y] = str[tmp];
-			tmp++;
-			y++;
-		}
+			words[i][y++] = str[tmp++];
 		words[i][y] = '\0';
 		while (str[j++] == ' ')
 			;
-		j--;
-		tmp = j;
+		tmp = --j;
 		i++;
 	}
 	words[i] = '\0';
