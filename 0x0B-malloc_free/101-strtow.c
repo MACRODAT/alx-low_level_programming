@@ -2,52 +2,76 @@
 #include "main.h"
 
 /**
- * strtow - frees
- * @str: grid
- * Return: n
+ * count_words - Helper function to count the number of words in a string.
+ * @s: The string to evaluate.
+ *
+ * Return: The number of words.
+ */
+int count_words(char *s)
+{
+	int flag = 0, c = 0, word_count = 0;
+
+	for (c = 0; s[c] != '\0'; c++)
+	{
+		if (s[c] == ' ')
+			flag = 0;
+		else if (flag == 0)
+		{
+			flag = 1;
+			word_count++;
+		}
+	}
+
+	return word_count;
+}
+
+/**
+ * strtow - Splits a string into words.
+ * @str: The string to split.
+ *
+ * Return: Pointer to an array of strings (Success)
+ *         or NULL (Error).
  */
 char **strtow(char *str)
 {
-	char **words;
-	int i = 0, j = 0, tmp = 0, y = 1, size = 0, words_l = 0;
+	char **matrix, *tmp;
+	int i, k = 0, len = 0, word_count = 0, c = 0, start = 0, end = 0;
 
-	if (str == NULL)
-		return (NULL);
-	while (str[i++])
+	while (*(str + len))
+		len++;
+	word_count = count_words(str);
+	if (word_count == 0)
+		return NULL;
+
+	matrix = (char **)malloc(sizeof(char *) * (word_count + 1));
+	if (matrix == NULL)
+		return NULL;
+
+	for (i = 0; i <= len; i++)
 	{
-		size++;
-		if (str[i] == ' ' && !y++)
-			words_l++;
-		else
-			y = 0;
+		if (str[i] == ' ' || str[i] == '\0')
+		{
+			if (c)
+			{
+				end = i;
+				tmp = (char *)malloc(sizeof(char) * (c + 1));
+				if (tmp == NULL)
+					return NULL;
+
+				while (start < end)
+					*tmp++ = str[start++];
+				*tmp = '\0';
+
+				matrix[k] = tmp - c;
+				k++;
+				c = 0;
+			}
+		}
+		else if (c++ == 0)
+			start = i;
 	}
-	if (y == 0)
-		words_l++;
-	if (!words_l)
-		return (NULL);
-	i = 0;
-	words = malloc((words_l + 1) * sizeof(char *));
-	if (!words)
-		return (NULL);
-	while (str[j++] == ' ')
-		i = 0;
-	tmp = --j;
-	while (i < words_l)
-	{
-		while (str[j++] != ' ')
-			;
-		words[i] = malloc((j - tmp + 1) * sizeof(char));
-		if (!words[i])
-			return (NULL);
-		y = 0;
-		while (str[tmp] != ' ')
-			words[i][y++] = str[tmp++];
-		words[i][y] = '\0';
-		while (str[j++] == ' ')
-			;
-		tmp = --j;
-		i++;
-	}
-	words[i] = '\0';
-	return (words);
+
+	matrix[k] = NULL;
+
+	return matrix;
 }
