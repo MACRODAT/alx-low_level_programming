@@ -18,7 +18,7 @@ int len(char *s)
 		i++;
 	}
 
-	return (i+2);
+	return (i + 2);
 }
 
 
