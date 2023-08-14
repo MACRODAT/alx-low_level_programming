@@ -17,8 +17,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog = malloc(sizeof(dog_t));
 	if (dog == NULL)
 		return (NULL);
-	dog->owner = malloc(sizeof(char) * 10000);
-	dog->name = malloc(sizeof(char) * 10000);
+	dog->owner = malloc(sizeof(char) * 1000000);
+	dog->name = malloc(sizeof(char) * 1000000);
 	while (*name)
 	{
 		dog->name[i] = *name;
