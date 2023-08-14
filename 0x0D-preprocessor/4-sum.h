@@ -1,6 +1,6 @@
-#ifndef PROGRAM1
-#define PROGRAM1
+#ifndef PROGRAM4
+#define PROGRAM4
 
-#define ABS(x) (((x) >= 0) ? (x) : -(x))
+#define SUM(x, y) ((x) + (y))
 
 #endif
