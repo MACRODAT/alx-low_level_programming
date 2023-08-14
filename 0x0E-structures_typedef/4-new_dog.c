@@ -18,7 +18,7 @@ int len(char *s)
 		i++;
 	}
 
-	return (i);
+	return (i+2);
 }
 
 
@@ -43,7 +43,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	l2 = len(owner);
 	dog->name = malloc(sizeof(char) * l1);
 	dog->owner = malloc(sizeof(char) * l2);
-	if (!dog->name || !dog->owner)
+	if ((!dog->name) || !dog->owner)
 		return (NULL);
 	while (*name)
 	{
