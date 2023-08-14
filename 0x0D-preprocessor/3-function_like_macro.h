@@ -1,5 +1,5 @@
-#ifndef PROGRAM1
-#define PROGRAM1
+#ifndef PROGRAM3
+#define PROGRAM3
 
 #define ABS(x) (((x) >= 0) ? (x) : -(x))
 
