@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (2);
 	}
-	// the genius line - not my idea hh
+	/* the genius line - not my idea hh*/
 	arr = (char *)main;
 	for (i = 0; i < b - 1; i++)
 	{

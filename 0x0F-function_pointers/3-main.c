@@ -5,12 +5,12 @@
  * main - fct
  * @argc: count
  * @argvs: arg
- * 
+ *
  * Return: 0
-*/
+ */
 int main(int argc, char *argv[])
 {
-	int a,b,r;
+	int a, b, r;
 	int (*f)(int, int);
 
 	if (argc != 4)
