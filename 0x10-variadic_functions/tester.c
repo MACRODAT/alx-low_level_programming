@@ -2,7 +2,7 @@
 
 int main(void)
 {
-	char *sep = NULL;
+	char *sep = '-';
 
 	print_strings(sep, 3, NULL, "nice to meet yiy", "bye");
 	return 0;	
