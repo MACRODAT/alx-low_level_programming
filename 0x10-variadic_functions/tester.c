@@ -1,4 +1,5 @@
 #include "variadic_functions.h"
+#include "0-sum_them_all.c"
 
 int main(void)
 {
