@@ -1,8 +1,8 @@
 #include "variadic_functions.h"
 
 /**
- * print_all - prints anything
- * @format: list of types of arguments passed to the function
+ * print_all - printer
+ * @format: fmrt
  */
 void print_all(const char * const format, ...)
 {
@@ -42,7 +42,6 @@ void print_all(const char * const format, ...)
 			i++;
 		}
 	}
-
-	printf("\n");
 	va_end(list);
+	printf("\n");
 }
