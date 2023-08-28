@@ -1,17 +1,21 @@
 #include "lists.h"
 
 /**
- * print_listint - prints
- * @h: next node
+ * add_nodeint - prints
+ * @head: next node
+ * @n: int
  *
  * Return: size
 */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
-	listint_t first;
+	listint_t *first;
 
-	first.n = n;
-	first.next = *head;
+	first = malloc(sizeof(listint_t));
+	if (!first)
+		return (NULL);
+	first->n = n;
+	first->next = *head;
 
 	return (&first);
 }
