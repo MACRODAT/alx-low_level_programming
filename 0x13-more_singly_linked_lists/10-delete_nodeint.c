@@ -16,8 +16,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	{
 		if (head)
 		{
-			pop_listint(head);
-			return (1);
+			return (pop_listint(head) ? 1 : 0);
 		}
 		return (-1);
 	}
