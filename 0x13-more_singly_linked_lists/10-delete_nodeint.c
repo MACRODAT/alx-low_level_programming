@@ -24,19 +24,15 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	}
 	
 	next = *head;
-	while (next && t < index - 1)
+	while (next && next->next && && t < index - 1)
 	{
 		next = next->next;
 		t++;
 	}
 	if (t != index - 1)
 		return (-1);
-	if (next->next)
-	{
-		tmp = next->next;
-		next->next = next->next->next;
-		free(tmp);
-		return (1);
-	}
-	return (-1);
+	tmp = next->next;
+	next->next = next->next->next;
+	free(tmp);
+	return (1);
 }
