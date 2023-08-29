@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * print_listint - prints
+ * listint_len - prints
  * @h: next node
  *
  * Return: size
