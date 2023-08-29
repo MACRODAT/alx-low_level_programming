@@ -12,16 +12,17 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	listint_t *next;
 	listint_t *tmp;
 
+	if (!head || !*head)
+		return (-1);
 	if (index == 0)
 	{
 		if (head)
 		{
-			return (pop_listint(head) ? 1 : 0);
+			return (pop_listint(head) ? 1 : -1);
 		}
 		return (-1);
 	}
-	if (!head || !*head)
-		return (-1);
+	
 	next = *head;
 	while (next && t < index - 1)
 	{
