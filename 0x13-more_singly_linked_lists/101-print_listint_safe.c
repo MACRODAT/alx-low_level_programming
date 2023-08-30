@@ -20,7 +20,7 @@ size_t print_listint_safe(const listint_t *head)
 			cur = cur->next;
 		else
 		{
-			printf("->[%p] %d\n", (void *)cur->next, cur->next->n);
+			printf("-> [%p] %d\n", (void *)cur->next, cur->next->n);
 			break;
 		}
 	}
