@@ -10,7 +10,8 @@ size_t print_listint_safe(const listint_t *head)
 	const listint_t *cur = head;
 	size_t elements = 0;
 	long int diff = 0;
-
+	if (!cur)
+		exit(98);
 	while (cur)
 	{
 		printf("[%p] %d\n", (void *)cur, cur->n);
