@@ -8,14 +8,12 @@ size_t print_listint_safe(const listint_t *head)
 {
 	const listint_t *cur = head;
 	size_t elements = 0;
-	size_t  tmp_index = 0;
 
 	while (cur)
 	{
 		printf("[%p] %d", (void *)cur, cur->n);
 		elements++;
-		tmp_index = cur - cur->next;
-		if (tmp_index > 0)
+		if (cur - cur->next > 0)
 			cur = cur->next;
 		else
 		{
