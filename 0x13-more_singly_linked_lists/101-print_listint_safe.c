@@ -22,7 +22,7 @@ size_t print_listint_safe(const listint_t *head)
 		{
 			if (tmp == cur)
 			{
-				printf("-> [%p] %d", (void *)cur, cur->n);
+				printf("-> [%p] %d", (void *)tmp, tmp->n);
 				return (elements);
 			}
 			tmp = tmp->next;
