@@ -13,8 +13,6 @@ size_t print_listint_safe(const listint_t *head)
 	{
 		printf("[%p] %d", (void *)cur, cur->n);
 		elements++;
-		if (!cur->next)
-			break;
 		if (cur - cur->next > 0)
 			cur = cur->next;
 		else
