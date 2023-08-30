@@ -3,6 +3,7 @@
 /**
  * delete_nodeint_at_index - inserts
  * @index: node
+ * @head: node
  *
  * Return: node
 */
@@ -22,9 +23,9 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		}
 		return (-1);
 	}
-	
+
 	next = *head;
-	while (next && next->next && && t < index - 1)
+	while (next && next->next && t < index - 1)
 	{
 		next = next->next;
 		t++;

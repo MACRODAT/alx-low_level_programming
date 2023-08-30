@@ -9,7 +9,7 @@ size_t print_listint_safe(const listint_t *head)
 	const listint_t *cur = head;
 	const listint_t *tmp = head;
 	size_t elements = 0;
-	size_t tmp_index = 0;
+	size_t  tmp_index = 0;
 
 	while (cur)
 	{
