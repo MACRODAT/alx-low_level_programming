@@ -15,7 +15,7 @@ int create_file(const char *filename, char *text_content)
 	while (text_content[_len])
 		_len++;
 
-	n_read = open(filename, O_CREAT | O_RDWR | O_TRUNC);
+	n_read = open(filename, O_CREAT | O_RDWR | O_TRUNC, S_IRUSR | S_IWUSR);
 	if (n_read < 0)
 		return (-1);
 	n_write = write(n_read, text_content, _len);
