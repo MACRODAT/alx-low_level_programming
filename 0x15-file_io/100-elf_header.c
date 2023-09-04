@@ -67,6 +67,55 @@ void is_elf(unsigned char *e_ident)
 	}
 }
 
+/**
+ * _class - the class
+ * @e_ident: ptr
+ */
+void _class(unsigned char *e_ident)
+{
+	printf("  Class:                             ");
+
+	switch (e_ident[EI_CLASS])
+	{
+	case ELFCLASSNONE:
+		printf("none\n");
+		break;
+
+	case ELFCLASS64:
+		printf("ELF64\n");
+		break;
+	case ELFCLASS32:
+		printf("ELF32\n");
+		break;
+	default:
+		printf("<unknown: %x>\n", e_ident[EI_CLASS]);
+	}
+}
+
+/**
+ * _data - Pt the data
+ * @e_ident: ptr
+ */
+void _data(unsigned char *e_ident)
+{
+	printf("  Data:                              ");
+
+	switch (e_ident[EI_DATA])
+	{
+	case ELFDATANONE:
+		printf("none\n");
+		break;
+	case ELFDATA2MSB:
+		printf("2's complement, big endian\n");
+		break;
+	case ELFDATA2LSB:
+		printf("2's complement, little endian\n");
+		break;
+	default:
+		printf("<unknown: %x>\n", e_ident[EI_CLASS]);
+	}
+}
+
 
 /**
  * main - Write a program that displays the information 
@@ -108,6 +157,8 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	is_elf(h->e_ident);
 	printf("ELF Header:\n");
 	_magic(h->e_ident);
+	_class(h->e_ident);
+	_data(h->e_ident);
 
 	free(h);
 	close_e(o);
