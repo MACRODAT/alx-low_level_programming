@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * append_text_to_file - reads a text file
+ * create_file - reads a text file
  * @filename: file name
  * @text_content: size
  * Return: nothing
 */
-int append_text_to_file(const char *filename, char *text_content)
+int create_file(const char *filename, char *text_content)
 {
 	int _len = 0, n_write = 0, n_read = 0;
 
