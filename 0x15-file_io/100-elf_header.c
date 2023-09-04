@@ -6,10 +6,10 @@
 #include <stdlib.h>
 
 /**
- * main - Displays the information contained in the
- *        ELF header at the start of an ELF file.
- * @argc: The number of arguments supplied to the program.
- * @argv: An array of pointers to the arguments.
+ * main - Write a program that displays the information 
+ * 		contained in the ELF header at the start of an ELF file.
+ * @argc: The number
+ * @argv: An arrr
  *
  * Return: 0 on success.
  *
