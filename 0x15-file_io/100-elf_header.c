@@ -47,6 +47,28 @@ void _magic(unsigned char *e_ident)
 }
 
 /**
+ * is_elf - elf
+ * @e_ident: ptr
+ *
+ * Description: not then error
+ */
+void is_elf(unsigned char *e_ident)
+{
+	int i;
+
+	for (i = 0; i < 4; i++)
+	{
+		if (	e_ident[i] != 127 && e_ident[i] != 'E' &&
+		    	e_ident[i] != 'L' && e_ident[i] != 'F')
+		{
+			dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
+			exit(98);
+		}
+	}
+}
+
+
+/**
  * main - Write a program that displays the information 
  * 		contained in the ELF header at the start of an ELF file.
  * @argc: The number
@@ -83,7 +105,11 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: `%s`: No such file\n", argv[1]);
 		exit(98);
 	}
+	is_elf(h->e_ident);
 	printf("ELF Header:\n");
 	_magic(h->e_ident);
+
+	free(h);
+	close_e(o);
 	return (0);
 }
