@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * read_textfile - reads a text file
+ * create_file - reads a text file
  * @filename: file name
  * @text_content: size
  * Return: nothing
