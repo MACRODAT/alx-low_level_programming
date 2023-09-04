@@ -10,7 +10,7 @@
 int main(int argc, char *argv[])
 {
 	int fd1, fd2;
-	int read_state, write_state, close_state1, close_state2;
+	int read_state, close_state1, close_state2;
 	char b[1024];
 
 	if (argc != 3)
