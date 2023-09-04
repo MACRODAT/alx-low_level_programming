@@ -30,7 +30,7 @@ void close_e(int elf)
  *
  * Description: ERR
  */
-void print_magic(unsigned char *e_ident)
+void _magic(unsigned char *e_ident)
 {
 	int i;
 
@@ -79,7 +79,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	if (r == -1)
 	{
 		free(h);
-		close_elf(o);
+		close_e(o);
 		dprintf(STDERR_FILENO, "Error: `%s`: No such file\n", argv[1]);
 		exit(98);
 	}
