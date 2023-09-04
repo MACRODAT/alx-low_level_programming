@@ -15,9 +15,6 @@ int create_file(const char *filename, char *text_content)
 	while (text_content[_len])
 		_len++;
 
-	if (!b)
-		return (-1);
-
 	n_read = open(filename, O_CREAT | O_RDWR | O_TRUNC);
 	if (n_read < 0)
 		return (-1);
