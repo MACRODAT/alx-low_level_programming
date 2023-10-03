@@ -15,20 +15,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (!filename || b)
 		return (0);
 	fd = open(filename, O_RDONLY);
-	if (fd < 0)
-	{
-		free(b);
-		return (0);
-	}
 	read_ = read(fd, b, letters);
-	if (read_ < 0)
-	{
-		free(b);
-		return (0);
-	}
-	b[read_] = 0;
 	wrote = write(STDOUT_FILENO, b, read_);
-	if (wrote < 0 || wrote != read_)
+	if (fd < 0 || read_ < 0 || wrote < 0 || wrote != read_)
 	{
 		free(b);
 		close(fd);
