@@ -6,7 +6,7 @@
  * @letters: size
  * Return: nothing
 */
-ssize_t read_textfile(const char *filename, size_t letters)
+ssize_t read_textfile2(const char *filename, size_t letters)
 {
 	int fd;
 	int n_read, n_write;
