@@ -1,5 +1,8 @@
 #include "main.h"
 
+#define EXIT_SUCCESS 0
+#define EXIT_FAILURE 1
+
 /**
  * _isupper - checks for uppercase character
  * @c: the character to be checked
