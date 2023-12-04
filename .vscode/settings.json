@@ -1,5 +1,7 @@
 {
 	"files.associations": {
-		"main.h": "c"
+		"main.h": "c",
+		"lists.h": "c",
+		"type_traits": "c"
 	}
 }
