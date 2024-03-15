@@ -19,7 +19,7 @@ int recursive_search(int *array, size_t size, int value)
 	if (array[middle] == value)
 		return ((int) middle);
 
-	for (i = 0; i < size; i++)
+	for (i = 0; i < (int) size; i++)
 		printf("%s %d", (i == 0) ? ":" : ",", array[i]);
 
 	printf("\n");
